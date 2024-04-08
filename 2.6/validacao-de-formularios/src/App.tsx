@@ -5,16 +5,16 @@ function App() {
   const [showForm, setShowForm] = useState(true);
   const [isBtnDisabled, setIsBtnDisabled] = useState(true);
 
-  const validateEmail = (value) => {
+  const validateEmail = (value: string) => {
     const validRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}/;
     const isEmailValid = validRegex.test(value);
     return !isEmailValid;
   }
 
-  const handleChange = ({ target }) => {
-   setEmail(target.value)
-   const isValidEmail = validateEmail(target.value);
-   setIsBtnDisabled(isValidEmail);
+  const handleChange: React.ChangeEventHandler<HTMLInputElement> = ({ target }) => {
+    setEmail(target.value);
+    const isValidEmail = validateEmail(target.value);
+    setIsBtnDisabled(isValidEmail);
   };
 
   return (
