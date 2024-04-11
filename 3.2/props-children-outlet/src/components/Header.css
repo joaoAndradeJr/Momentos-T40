@@ -1,0 +1,13 @@
+.navigation {
+  align-items: center;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 2rem;
+}
+
+.link {
+  margin-right: 1rem;
+  color: #333;
+  text-decoration: none;
+}
