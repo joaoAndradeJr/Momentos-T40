@@ -1,0 +1,7 @@
+.post-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1.5rem;
+}

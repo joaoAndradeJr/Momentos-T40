@@ -1,0 +1,14 @@
+.main-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2rem;
+  margin-bottom: 5rem;
+}
+
+.title {
+  color: var(--title);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}

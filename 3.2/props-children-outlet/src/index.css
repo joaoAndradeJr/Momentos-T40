@@ -1,4 +1,15 @@
 * {
   margin: 0;
   padding: 0;
+  --background: #72fafa83;
+  --header-menu: #0000FF;
+  --title: #f88d01;
+  --buttons: #00FFFF;
+  --icons: #FF1493;
+  --font-color: #fff;
+  --tags: #ff00fb;
+}
+
+body {
+  background-color: var(--background);
 }
