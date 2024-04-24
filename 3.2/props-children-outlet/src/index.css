@@ -1,6 +1,9 @@
 * {
   margin: 0;
   padding: 0;
+}
+
+:root {
   --background: #72fafa83;
   --header-menu: #0000FF;
   --title: #f88d01;
