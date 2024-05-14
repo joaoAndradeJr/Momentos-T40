@@ -10,7 +10,8 @@ export default function Cart() {
       { !productsInCart.length && <h1>Carrinho vazio</h1> }
       { productsInCart.map((product) => (
         <ProductCard product={ product } key={ product.id } />
-      )) }
+      ))} 
+      { <h3>{ `Total: R$ ${productsInCart.reduce((acc, { price }) => acc + price, 0).toFixed(2)}` }</h3> }
     </main>
   );
 }

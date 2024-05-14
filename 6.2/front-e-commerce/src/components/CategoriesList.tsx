@@ -13,7 +13,12 @@ export default function CategoriesList() {
   return (
     <aside className="aside-container">
       { categories.map((category) => (
-        <div key={category.id}>{category.name}</div>
+        <div key={category.id}>
+          <label htmlFor={category.id}>
+            <input type="radio" name="category" id={category.id} onChange={ () => {} } />
+            {category.name}
+          </label>
+        </div>
       )) }
     </aside>
   )

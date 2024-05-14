@@ -3,7 +3,7 @@ export interface Product {
   title: string;
   price: number;
   thumbnail: string;
-  attributes?: Array<{}>;
+  attributes?: any;
 };
 
 export interface CartReducer {

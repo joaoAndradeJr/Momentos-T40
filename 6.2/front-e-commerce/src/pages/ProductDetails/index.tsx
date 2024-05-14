@@ -20,7 +20,7 @@ export default function ProductDetails() {
           <h1>{product.title}</h1>
           <img src={product.thumbnail} alt={product.title} />
           <ProductAttributes attributes={product.attributes} />
-          <p>{product.price}</p>
+          <h3>{ `R$ ${product.price.toFixed(2)} `}</h3>
         </section> )}
     </main>
   );
