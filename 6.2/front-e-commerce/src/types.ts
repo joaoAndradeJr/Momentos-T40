@@ -13,3 +13,13 @@ export interface UserReducer {
   name: string;
   email: string;
 };
+
+export interface GlobalState {
+  user: UserReducer;
+  cart: CartReducer;
+};
+
+export interface Category {
+  id: string;
+  name: string;
+};

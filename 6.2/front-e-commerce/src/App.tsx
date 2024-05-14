@@ -1,12 +1,15 @@
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Cart from './pages/Cart';
+import Layout from './components/Layout';
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={ <Home /> } />
-      <Route path="/cart" element={ <Cart /> } />
+      <Route path="/" element={ <Layout /> }>
+        <Route path="" element={ <Home /> } />
+        <Route path="/cart" element={ <Cart /> } />
+      </Route>
       <Route path="*" element={<div>Not Found</div>} />
     </Routes>
   );

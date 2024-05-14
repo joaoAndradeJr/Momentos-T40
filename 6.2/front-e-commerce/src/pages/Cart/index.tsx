@@ -1,15 +1,9 @@
 import { useSelector } from 'react-redux';
 import ProductCard from '../../components/ProductCard';
-import { UserReducer } from '../../redux/reducers/user';
-import { CartReducer } from '../../redux/reducers/cart';
-
-interface GlobalState {
-  user: UserReducer;
-  cart: CartReducer;
-};
+import { GlobalState } from '../../types';
 
 export default function Cart() {
-  const { productsInCart } = useSelector((state: GlobalState) => state.cart);
+  const { productsInCart } = useSelector(({ cart }: GlobalState) => cart);
 
   return (
     <main>
