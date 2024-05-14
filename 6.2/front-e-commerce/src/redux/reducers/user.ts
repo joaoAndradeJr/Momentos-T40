@@ -1,6 +1,7 @@
 import { AnyAction } from 'redux';
+import { UserReducer } from '../../types';
 
-const INITIAL_STATE = {
+const INITIAL_STATE: UserReducer = {
   name: '',
   email: '',
 };
