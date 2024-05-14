@@ -3,6 +3,7 @@ export interface Product {
   title: string;
   price: number;
   thumbnail: string;
+  attributes?: Array<{}>;
 };
 
 export interface CartReducer {
@@ -22,4 +23,10 @@ export interface GlobalState {
 export interface Category {
   id: string;
   name: string;
+};
+
+export interface Attribute {
+  id: string;
+  name: string;
+  value_name: string;
 };
