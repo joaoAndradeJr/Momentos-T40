@@ -1,4 +1,4 @@
-export interface Product {
+export type Product = {
   id: string;
   title: string;
   price: number;
@@ -18,6 +18,9 @@ export interface UserReducer {
 export interface GlobalState {
   user: UserReducer;
   cart: CartReducer;
+  productsList: {
+    products: Product[];
+  };
 };
 
 export interface Category {

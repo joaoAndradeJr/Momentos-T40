@@ -1,10 +1,13 @@
+import { useSelector } from 'react-redux';
 import ProductCard from '../../components/ProductCard';
-import acessorios from '../../utils/acessoriosVeiculos.json';
+import { GlobalState } from '../../types';
 
 export default function ProductsList() {
+  const { products } = useSelector((globalState: GlobalState) => globalState.productsList);
+
   return (
     <section className="products-list-container">
-      { acessorios.results.map((product) => (
+      { products.map((product) => (
         <ProductCard key={product.id} product={product} /> )) }
     </section>
   );
