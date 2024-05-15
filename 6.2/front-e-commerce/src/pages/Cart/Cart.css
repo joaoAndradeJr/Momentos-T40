@@ -1,0 +1,16 @@
+.main-container {
+  margin: 50 auto;
+  max-width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+.empty-cart-message {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.total {
+  font-size: 1.2em;
+  margin-top: 20px;
+}

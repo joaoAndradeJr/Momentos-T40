@@ -12,7 +12,7 @@ export default function ProductCard({ product }: { product: Product }) {
   };
 
   return (
-    <>
+    <div className="product-item">
       <Link to={ `/product/${product.id}` }>
         <h3>{product.title}</h3>
         <img src={product.thumbnail} alt={product.title} />
@@ -22,6 +22,6 @@ export default function ProductCard({ product }: { product: Product }) {
         value="Adicionar ao carrinho"
         onClick={ handleClick }
       />
-    </>
+    </div>
   );
 }

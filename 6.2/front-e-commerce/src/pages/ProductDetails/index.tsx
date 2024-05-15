@@ -6,6 +6,7 @@ import ProductAttributes from '../../components/ProductAttributes';
 import Button from '../../components/Button';
 import { useDispatch } from 'react-redux';
 import { sendToCart } from '../../redux/actions';
+import './ProductDetails.css';
 
 export default function ProductDetails() {
   const [product, setProduct] = useState<Product>();
@@ -22,9 +23,9 @@ export default function ProductDetails() {
   };
 
   return (
-    <main>
+    <main className="main-container">
       { product && (
-        <section>
+        <section className="product-details">
           <h1>{product.title}</h1>
           <img src={product.thumbnail} alt={product.title} />
           <ProductAttributes attributes={product.attributes} />

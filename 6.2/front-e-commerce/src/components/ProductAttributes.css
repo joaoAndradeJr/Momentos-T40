@@ -4,20 +4,29 @@
 }
 
 .vertical-header {
+  background-color: #f2f2f2;
   display: flex;
   flex-direction: column;
+  min-height: 19px;
 }
 
 .vertical-header-cell {
   background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  font-weight: bold;
   padding: 8px;
+  text-align: left;
 }
 
 .vertical-data {
+  background-color: #fff;
   display: flex;
   flex-direction: column;
 }
 
 .vertical-data-cell {
+  border: 1px solid #ddd;
   padding: 8px;
+  min-height: 18px;
+  text-align: left;
 }
