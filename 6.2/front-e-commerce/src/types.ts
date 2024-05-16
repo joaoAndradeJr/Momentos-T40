@@ -1,3 +1,6 @@
+import { AnyAction } from "redux";
+import { ThunkDispatch } from "redux-thunk";
+
 export type Product = {
   id: string;
   title: string;
@@ -20,6 +23,8 @@ export interface GlobalState {
   cart: CartReducer;
   productsList: {
     products: Product[];
+    categories: Category[];
+    isLoading: boolean;
   };
 };
 
@@ -33,3 +38,5 @@ export interface Attribute {
   name: string;
   value_name: string;
 };
+
+export type DispatchType = ThunkDispatch<GlobalState, unknown, AnyAction>;

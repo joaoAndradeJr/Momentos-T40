@@ -1,22 +1,23 @@
-import { useEffect, useState } from 'react';
-import { fetchURL } from '../services/fetchURL';
-import { Category } from '../types';
-import { useDispatch } from 'react-redux';
-import { changeProducts } from '../redux/actions';
+import { useEffect } from 'react';
+import { DispatchType, GlobalState } from '../types';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchCategories, fetchProductsByCategory } from '../redux/actions';
+import Loading from './Loading';
 
 export default function CategoriesList() {
-  const [categories, setCategories] = useState<Category[]>([]);
-  const dispatch = useDispatch();
+  const { categories } = useSelector((globalState: GlobalState) => globalState.productsList);
+  const { isLoading } = useSelector((globalState: GlobalState) => globalState.productsList);
+  const dispatch: DispatchType = useDispatch();
 
   useEffect(() => {
-    fetchURL('https://api.mercadolibre.com/sites/MLB/categories')
-      .then((data) => setCategories(data));
-  }, []);
+    dispatch(fetchCategories())
+  }, []); 
 
   const handleChange = async (id: string) => {
-    fetchURL(`https://api.mercadolibre.com/sites/MLB/search?category=${id}`)
-      .then(({ results }) => dispatch(changeProducts(results)));
+    dispatch(fetchProductsByCategory(id));
   };
+
+  if (isLoading) return <Loading />;
 
   return (
     <aside className="aside-container">
